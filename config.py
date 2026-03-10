@@ -1,0 +1,39 @@
+"""
+Configuration file for Tizilim login automation
+"""
+import os
+from pathlib import Path
+
+class Config:
+    """Configuration settings"""
+
+    # Platform credentials
+    EMAIL = "w.nurda@mail.ru"
+    PASSWORD = "Ora200506$"
+
+    # ECP certificate settings
+    ECP_KEY_PATH = r"C:\Users\idris\Downloads\Telegram Desktop\GOST512_ad720e1e8fe2cb142db34624bf672da65812a6eb.p12"
+    ECP_KEY_PASSWORD = "A1234a"
+
+    # URLs
+    LOGIN_URL = "https://tizilim.gov.kz/auth/login"
+
+    # Lot URLs to process after login
+    LOT_URLS = [
+        "https://tizilim.gov.kz/ru/auction/rooms/2588",
+        # Add more lot URLs here as needed
+    ]
+
+    # Bidding settings
+    BID_REDUCTION = 100000  # Reduce bid by 100,000 tenge from current price (if > 12.5M)
+    BID_PERCENTAGE = 0.99  # Reduce by 1% (if <= 12.5M)
+    BID_THRESHOLD = 12500000  # Threshold price in tenge (12.5 million)
+
+    # Lot polling settings
+    LOT_CHECK_INTERVAL_START = 7  # Start checking every 7 seconds
+    LOT_CHECK_INTERVAL_MAX = 30   # Max 30 seconds between checks
+    LOT_MAX_WAIT_HOURS = 24       # Maximum wait time for lot to appear
+
+    # Timeouts (seconds)
+    DEFAULT_TIMEOUT = 20
+    NCALAYER_TIMEOUT = 60
