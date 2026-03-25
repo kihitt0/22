@@ -229,7 +229,7 @@ def extract_and_submit_bid(driver, wait, start_price):
         automation_thread.join(timeout=60)
 
         logger.info("NCALayer thread finished, waiting for all keypresses to complete...")
-        time.sleep(0.1)
+        time.sleep(Config.NCALAYER_ACTION_DELAY)
 
         logger.info("="*60)
         logger.info("BID SUBMITTED SUCCESSFULLY!")

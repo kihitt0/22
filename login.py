@@ -120,7 +120,7 @@ def authorize_with_ecp(driver, wait, skip_navigation=False):
         # Important: Wait for all NCALayer keypresses to finish before proceeding
         # The automation does Enter-Tab-Enter at the end, we need to ensure
         # those keypresses don't interfere with the login form
-        time.sleep(0.5)
+        time.sleep(Config.NCALAYER_ACTION_DELAY)
 
         logger.info("ECP authorization completed!")
         time.sleep(0.1)

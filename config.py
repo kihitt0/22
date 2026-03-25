@@ -1,18 +1,16 @@
 """
 Configuration file for Tizilim login automation
 """
-import os
-from pathlib import Path
 
 class Config:
     """Configuration settings"""
 
     # Platform credentials
     EMAIL = "w.nurda@mail.ru"
-    PASSWORD = "Ora200506$"
+    PASSWORD = "Ora200405$"
 
     # ECP certificate settings
-    ECP_KEY_PATH = r"C:\Users\idris\Downloads\Telegram Desktop\GOST512_ad720e1e8fe2cb142db34624bf672da65812a6eb.p12"
+    ECP_KEY_PATH = r"C:\Users\Алан\Documents\GOST512_ad720e1e8fe2cb142db34624bf672da65812a6eb.p12"
     ECP_KEY_PASSWORD = "A1234a"
 
     # URLs
@@ -37,3 +35,19 @@ class Config:
     # Timeouts (seconds)
     DEFAULT_TIMEOUT = 20
     NCALAYER_TIMEOUT = 60
+
+    # NCALayer automation settings
+    NCALAYER_BACKEND = "pywinauto"
+    NCALAYER_USE_SAVED_STORAGE = True
+    NCALAYER_START_DELAY = 0.05
+    NCALAYER_WINDOW_POLL_INTERVAL = 0.05
+    NCALAYER_ACTION_DELAY = 0.05
+    NCALAYER_KEY_INTERVAL = 0.01
+    NCALAYER_PASSWORD_FIELD_X_RATIO = 0.63
+    NCALAYER_PASSWORD_FIELD_Y_RATIO = 0.73
+    NCALAYER_OPEN_BUTTON_X_RATIO = 0.30
+    NCALAYER_OPEN_BUTTON_Y_RATIO = 0.89
+    NCALAYER_KEY_LIST_X_RATIO = 0.25
+    NCALAYER_KEY_LIST_Y_RATIO = 0.20
+    NCALAYER_SIGN_BUTTON_X_RATIO = 0.33
+    NCALAYER_SIGN_BUTTON_Y_RATIO = 0.93
