@@ -16,6 +16,21 @@ class Config:
     # URLs
     LOGIN_URL = "https://tizilim.gov.kz/auth/login"
 
+    # Mail.ru settings for waiting on lot invitation emails
+    MAIL_EMAIL = "w.nurda@mail.ru"
+    MAIL_PASSWORD = "VKZz8x0er7TAk1Hpw6fe"
+    MAIL_IMAP_HOST = "imap.mail.ru"
+    MAIL_IMAP_PORT = 993
+    MAIL_FOLDER = "INBOX"
+    MAIL_POLL_INTERVAL = 2
+    MAIL_MAX_WAIT_MINUTES = 60
+    MAIL_SUBJECT_CONTAINS = ""
+    MAIL_FROM_CONTAINS = "no-reply@tizilim.gov.kz"
+    MAIL_BODY_CONTAINS = "Заказчик приглашает Вас принять участие в аукционе"
+    MAIL_ACCEPT_ANY_ROOM_LINK = True
+    MAIL_CHECK_UNSEEN_FIRST = True
+    MAIL_RECENT_MESSAGES_LIMIT = 5
+
     # Lot URLs to process after login
     LOT_URLS = [
         "https://tizilim.gov.kz/ru/auction/rooms/2588",

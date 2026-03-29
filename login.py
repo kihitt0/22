@@ -18,8 +18,9 @@ from utils import (
     wait_for_page_load,
     safe_send_keys
 )
+from mail_handler import wait_for_lot_link_in_mail
 from ncalayer_handler import automate_ncalayer_in_thread
-from lot_handler import wait_for_lot_to_appear, continuous_bidding
+from lot_handler import continuous_bidding
 
 # Setup logging with UTF-8 encoding
 logging.basicConfig(
@@ -199,7 +200,17 @@ def authorize_with_credentials(driver, wait):
         raise
 
 
-def process_lot(driver, wait, lot_url):
+def login_to_tizilim(driver, wait):
+    """Perform the full tizilim login flow before processing lot links."""
+    logger.info("=" * 60)
+    logger.info("INITIAL TIZILIM LOGIN")
+    logger.info("=" * 60)
+
+    authorize_with_ecp(driver, wait, skip_navigation=False)
+    authorize_with_credentials(driver, wait)
+
+
+def process_lot(driver, wait, lot_url=None):
     """
     Process a single lot URL
 
@@ -213,9 +224,12 @@ def process_lot(driver, wait, lot_url):
     logger.info("="*60)
 
     try:
-        # Navigate to lot URL (will redirect to login if not authenticated)
-        logger.info(f"Navigating to lot: {lot_url}")
-        driver.get(lot_url)
+        logger.info("Waiting for mail.ru message with matching lot link...")
+        resolved_lot_url = wait_for_lot_link_in_mail(lot_url)
+
+        # Navigate to lot URL resolved from mail after we are already authenticated.
+        logger.info(f"Navigating to lot from email: {resolved_lot_url}")
+        driver.get(resolved_lot_url)
 
         # Wait a bit for potential redirect
         logger.info("Waiting for potential redirect to login page...")
@@ -230,54 +244,18 @@ def process_lot(driver, wait, lot_url):
         logger.info(f"Page title: {driver.title}")
 
         if "auth/login" in current_url:
-            logger.info("Detected redirect to login page, waiting for page to fully load...")
-
-            # Wait for login page to fully load
-            try:
-                WebDriverWait(driver, 10).until(
-                    lambda d: d.execute_script("return document.readyState") == "complete"
-                )
-                logger.info("Login page fully loaded")
-            except Exception as e:
-                logger.warning(f"Page load wait timeout: {e}")
-
-            # Additional wait for any JavaScript to initialize
+            logger.warning("Session is no longer authenticated, re-running tizilim login flow...")
+            login_to_tizilim(driver, wait)
+            driver.get(resolved_lot_url)
+            wait_for_page_load(driver)
             time.sleep(2)
-
-            logger.info("Proceeding with authentication")
-
-            # Authorize with ECP (skip navigation since we're already there)
-            authorize_with_ecp(driver, wait, skip_navigation=True)
-
-            # Login with credentials
-            authorize_with_credentials(driver, wait)
-
-            logger.info("Authentication completed!")
-            time.sleep(2)
-
-            # Check where we ended up after login
-            current_url = driver.current_url
-            logger.info(f"After login, current URL: {current_url}")
-
-            # If not on lot page, navigate to it manually
-            if "/lots/" not in current_url:
-                logger.info(f"Not on lot page, navigating to lot URL: {lot_url}")
-                driver.get(lot_url)
-                wait_for_page_load(driver)
-                time.sleep(2)
-                logger.info(f"Navigated to lot page: {driver.current_url}")
+            logger.info(f"Navigated to lot page after re-login: {driver.current_url}")
 
         # Now we should be on the lot page
         logger.info(f"Successfully on lot page: {driver.title}")
 
-        # Wait for submit button to appear (lot to become active)
-        logger.info("Waiting for submit button to appear...")
-        if not wait_for_lot_to_appear(driver, lot_url):
-            logger.error("Submit button did not appear - lot may not be active yet")
-            return False
-
-        # Start continuous bidding until target price reached
-        logger.info("Submit button is available, starting continuous bidding...")
+        # Start continuous bidding immediately on the current lot page.
+        logger.info("Starting continuous bidding without page refresh wait stage...")
         if not continuous_bidding(driver, wait):
             logger.error("Failed to complete bidding")
             return False
@@ -296,9 +274,16 @@ def main():
     wait = WebDriverWait(driver, Config.DEFAULT_TIMEOUT)
 
     try:
+        login_to_tizilim(driver, wait)
+
         # Process each lot URL
-        for i, lot_url in enumerate(Config.LOT_URLS, 1):
-            logger.info(f"\nProcessing lot {i}/{len(Config.LOT_URLS)}")
+        if Config.MAIL_ACCEPT_ANY_ROOM_LINK:
+            lot_targets = [None]
+        else:
+            lot_targets = Config.LOT_URLS
+
+        for i, lot_url in enumerate(lot_targets, 1):
+            logger.info(f"\nProcessing lot {i}/{len(lot_targets)}")
             success = process_lot(driver, wait, lot_url)
 
             if success:

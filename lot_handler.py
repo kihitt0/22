@@ -4,112 +4,16 @@ Lot handling functions for bidding
 import time
 import logging
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 
 from config import Config
 from utils import (
     find_element_with_fallbacks,
     click_element_with_fallbacks,
-    wait_for_page_load
+    wait_for_page_load,
 )
 from ncalayer_handler import automate_ncalayer_in_thread
 
 logger = logging.getLogger(__name__)
-
-
-def wait_for_lot_to_appear(driver, lot_url, max_wait_hours=None):
-    """
-    Constantly refresh until lot appears (submit button is visible)
-
-    Args:
-        driver: WebDriver instance
-        lot_url: URL of the lot
-        max_wait_hours: Maximum hours to wait (defaults to Config.LOT_MAX_WAIT_HOURS)
-
-    Returns:
-        True if lot appeared, False if timeout
-    """
-    if max_wait_hours is None:
-        max_wait_hours = Config.LOT_MAX_WAIT_HOURS
-
-    logger.info("="*60)
-    logger.info("Waiting for Lot Submit Button to Appear")
-    logger.info("="*60)
-    logger.info(f"Lot URL: {lot_url}")
-    logger.info(f"Max wait time: {max_wait_hours} hours")
-
-    start_time = time.time()
-    max_wait_time = max_wait_hours * 3600
-    poll_interval = Config.LOT_CHECK_INTERVAL_START
-    check_count = 0
-
-    submit_button_selectors = [
-        (By.CSS_SELECTOR, "button.v-btn.v-theme--light.bg-red.v-btn--density-default.v-btn--size-default.v-btn--variant-flat.mt-3"),
-        (By.CSS_SELECTOR, "button.bg-red"),  # Red submit button
-        (By.XPATH, "//button[contains(@class, 'bg-red')]"),
-        (By.XPATH, "//button[contains(text(), 'Отправить')]"),
-        (By.XPATH, "//button[contains(text(), 'Жіберу')]"),  # Kazakh
-        (By.CSS_SELECTOR, "button[type='submit']"),
-    ]
-
-    while (time.time() - start_time) < max_wait_time:
-        check_count += 1
-        elapsed = time.time() - start_time
-
-        logger.info(f"Check #{check_count}: Refreshing lot page...")
-        driver.refresh()
-        wait_for_page_load(driver)
-
-        # Wait extra time for Vue.js to render the form
-        time.sleep(2)
-
-        # First check if price fields are present (debugging)
-        try:
-            start_price_elem = driver.find_element(By.ID, "app-text-field-Стартовая цена")
-            logger.debug(f"✓ Starting price field found")
-        except:
-            logger.debug("✗ Starting price field NOT found")
-
-        try:
-            current_price_elem = driver.find_element(By.ID, "app-text-field-Текущая цена")
-            logger.debug(f"✓ Current price field found")
-        except:
-            logger.debug("✗ Current price field NOT found")
-
-        try:
-            bid_field_elem = driver.find_element(By.ID, "app-text-field-Сумма")
-            logger.debug(f"✓ Bid input field found")
-        except:
-            logger.debug("✗ Bid input field NOT found")
-
-        # Check if lot is available by looking for submit button
-        try:
-            for by, selector in submit_button_selectors:
-                try:
-                    submit_btn = driver.find_element(by, selector)
-                    logger.debug(f"Found button with selector: {selector}")
-                    logger.debug(f"Button visible: {submit_btn.is_displayed()}, enabled: {submit_btn.is_enabled()}")
-                    if submit_btn.is_displayed() and submit_btn.is_enabled():
-                        logger.info("="*60)
-                        logger.info(f"SUCCESS: Submit button appeared after {check_count} checks!")
-                        logger.info(f"Time elapsed: {elapsed/60:.1f} minutes")
-                        logger.info("="*60)
-                        return True
-                except Exception as e:
-                    logger.debug(f"Selector {selector} failed: {e}")
-                    continue
-        except Exception as e:
-            logger.debug(f"Error checking for submit button: {e}")
-
-        # Not available yet - wait with exponential backoff
-        logger.info(f"Submit button not available yet. Waiting {poll_interval}s... (elapsed: {elapsed/60:.1f}min)")
-        time.sleep(poll_interval)
-
-        # Exponential backoff
-        poll_interval = min(poll_interval * 1.5, Config.LOT_CHECK_INTERVAL_MAX)
-
-    logger.error(f"TIMEOUT: Submit button did not appear after {max_wait_hours} hours")
-    return False
 
 
 def get_current_price(driver):
