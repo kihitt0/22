@@ -18469,3 +18469,811 @@ Processing lot 1/1
 2026-03-29 21:49:52,383 - DEBUG - Incremented Retry for (url='/session/f1c3c24cc0b7430a2d0c618916dc21a9'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
 2026-03-29 21:49:52,383 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None)': /session/f1c3c24cc0b7430a2d0c618916dc21a9
 2026-03-29 21:49:52,383 - DEBUG - Starting new HTTP connection (2): localhost:54325
+2026-03-29 23:08:21,145 - INFO - Setting up Chrome WebDriver...
+2026-03-29 23:08:21,148 - INFO - ====== WebDriver manager ======
+2026-03-29 23:08:21,709 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-29 23:08:21,710 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-03-29 23:08:22,152 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15918
+2026-03-29 23:08:22,175 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-29 23:08:22,176 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-03-29 23:08:22,589 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15918
+2026-03-29 23:08:22,614 - INFO - Driver [C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-29 23:08:22,614 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe
+2026-03-29 23:08:22,658 - DEBUG - Started executable: `C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe` in a child process with pid: 14772 using 0 to output -3
+2026-03-29 23:08:23,173 - DEBUG - POST http://localhost:49248/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': 'normal', 'goog:chromeOptions': {'extensions': [], 'args': ['--start-maximized', '--ignore-certificate-errors', '--disable-blink-features=AutomationControlled']}}}}
+2026-03-29 23:08:23,174 - DEBUG - Starting new HTTP connection (1): localhost:49248
+2026-03-29 23:08:23,651 - DEBUG - http://localhost:49248 "POST /session HTTP/1.1" 200 0
+2026-03-29 23:08:23,651 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"146.0.7680.165","chrome":{"chromedriverVersion":"146.0.7680.165 (4b989da09e15a7dc0de0785cb5ff232aadae3f0f-refs/branch-heads/7680@{#2932})","userDataDir":"C:\\Users\\08D5~1\\AppData\\Local\\Temp\\scoped_dir14772_2080565979"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:49252"},"goog:processID":12084,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"336834a8009737e6c25ca812cd184186"}} | headers=HTTPHeaderDict({'Content-Length': '908', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:23,651 - DEBUG - Finished Request
+2026-03-29 23:08:23,651 - INFO - Chrome WebDriver ready
+2026-03-29 23:08:23,651 - INFO - ============================================================
+2026-03-29 23:08:23,651 - INFO - INITIAL TIZILIM LOGIN
+2026-03-29 23:08:23,651 - INFO - ============================================================
+2026-03-29 23:08:23,651 - INFO - ============================================================
+2026-03-29 23:08:23,652 - INFO - STEP 1: ECP Authorization
+2026-03-29 23:08:23,652 - INFO - ============================================================
+2026-03-29 23:08:23,652 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/url {'url': 'https://tizilim.gov.kz/auth/login'}
+2026-03-29 23:08:27,473 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/url HTTP/1.1" 200 0
+2026-03-29 23:08:27,473 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:27,473 - DEBUG - Finished Request
+2026-03-29 23:08:27,473 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/execute/sync {'script': 'return document.readyState', 'args': []}
+2026-03-29 23:08:27,476 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/execute/sync HTTP/1.1" 200 0
+2026-03-29 23:08:27,477 - DEBUG - Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:27,477 - DEBUG - Finished Request
+2026-03-29 23:08:27,477 - DEBUG - Page loaded completely
+2026-03-29 23:08:27,477 - INFO - Looking for terms checkbox...
+2026-03-29 23:08:27,477 - DEBUG - Trying selector 1/4 for terms checkbox: input[type='checkbox']
+2026-03-29 23:08:27,477 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:08:27,483 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element HTTP/1.1" 404 0
+2026-03-29 23:08:27,483 - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type='checkbox']\"}\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x42abca]\n\tchromedriver!(No symbol) [0x42ae6b]\n\tchromedriver!(No symbol) [0x46d0b2]\n\tchromedriver!(No symbol) [0x44db54]\n\tchromedriver!(No symbol) [0x46a9a5]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1243', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:27,484 - DEBUG - Finished Request
+2026-03-29 23:08:27,984 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:08:27,989 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element HTTP/1.1" 404 0
+2026-03-29 23:08:27,989 - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type='checkbox']\"}\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x42abca]\n\tchromedriver!(No symbol) [0x42ae6b]\n\tchromedriver!(No symbol) [0x46d0b2]\n\tchromedriver!(No symbol) [0x44db54]\n\tchromedriver!(No symbol) [0x46a9a5]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1243', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:27,989 - DEBUG - Finished Request
+2026-03-29 23:08:28,489 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:08:28,494 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element HTTP/1.1" 200 0
+2026-03-29 23:08:28,494 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.5"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:28,494 - DEBUG - Finished Request
+2026-03-29 23:08:28,495 - INFO - Found terms checkbox using selector 1
+2026-03-29 23:08:28,495 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.5/click {}
+2026-03-29 23:08:28,533 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.5/click HTTP/1.1" 200 0
+2026-03-29 23:08:28,534 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:28,534 - DEBUG - Finished Request
+2026-03-29 23:08:28,534 - INFO - Clicked terms checkbox
+2026-03-29 23:08:28,534 - INFO - Terms checkbox checked!
+2026-03-29 23:08:28,634 - INFO - Looking for ECP button...
+2026-03-29 23:08:28,635 - INFO - Starting NCALayer automation in background...
+2026-03-29 23:08:28,635 - INFO - NCALayer automation thread started
+2026-03-29 23:08:28,635 - DEBUG - Trying selector 1/4 for ECP button: button.v-btn.bg-main-light-blue
+2026-03-29 23:08:28,635 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element {'using': 'css selector', 'value': 'button.v-btn.bg-main-light-blue'}
+2026-03-29 23:08:28,642 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element HTTP/1.1" 200 0
+2026-03-29 23:08:28,642 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.8"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:28,642 - DEBUG - Finished Request
+2026-03-29 23:08:28,642 - INFO - Found ECP button using selector 1
+2026-03-29 23:08:28,642 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.8/click {}
+2026-03-29 23:08:28,681 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.8/click HTTP/1.1" 200 0
+2026-03-29 23:08:28,681 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:28,681 - DEBUG - Finished Request
+2026-03-29 23:08:28,681 - INFO - Clicked ECP button
+2026-03-29 23:08:28,681 - INFO - ECP button clicked!
+2026-03-29 23:08:28,681 - INFO - NCALayer automation is handling certificate selection and password...
+2026-03-29 23:08:28,682 - INFO - Waiting for ECP signing to complete...
+2026-03-29 23:08:28,686 - INFO - Fast NCALayer path: waiting for authentication dialog...
+2026-03-29 23:08:29,534 - INFO - Found window via pywinauto: NCALayer
+2026-03-29 23:08:29,598 - ERROR - Fast NCALayer automation failed: 
+Traceback (most recent call last):
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 234, in get_elem_interface
+    iface = cur_ptrn.QueryInterface(cls_name)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\comtypes\_post_coinit\unknwn.py", line 406, in QueryInterface
+    self.__com_QueryInterface(byref(iid), byref(p))  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+ValueError: NULL COM pointer access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\tizilim_clean\ncalayer_handler.py", line 348, in automate_ncalayer_dialog_fast
+    password_edit.set_edit_text(cert_password)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uia_controls.py", line 462, in set_edit_text
+    self.iface_value.SetValue(new_text)
+    ^^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 132, in __get__
+    value = self.fget(obj)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 252, in iface_value
+    return uia_defs.get_elem_interface(elem, "Value")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 236, in get_elem_interface
+    raise NoPatternInterfaceError()
+pywinauto.uia_defines.NoPatternInterfaceError
+2026-03-29 23:08:29,600 - WARNING - Fast backend unavailable or failed, falling back to PyAutoGUI flow
+2026-03-29 23:08:29,600 - INFO - Step 1: Waiting for NCALayer authentication dialog...
+2026-03-29 23:08:29,600 - INFO - Waiting for window with keywords: ['NCALayer', 'Аутентификация']
+2026-03-29 23:08:29,623 - INFO - Found window via pywinauto: NCALayer
+2026-03-29 23:08:29,725 - INFO - Step 2: Focusing password field...
+2026-03-29 23:08:29,880 - INFO - Step 3: Typing password...
+2026-03-29 23:08:30,186 - INFO - Step 4: Clicking open button...
+2026-03-29 23:08:30,339 - INFO - Step 5: Waiting for key selection window...
+2026-03-29 23:08:30,593 - INFO - Using key selection window fallback: NCALayer
+2026-03-29 23:08:30,899 - INFO - NCALayer automation completed successfully!
+2026-03-29 23:08:30,950 - INFO - NCALayer thread finished, waiting for all keypresses to complete...
+2026-03-29 23:08:31,000 - INFO - ECP authorization completed!
+2026-03-29 23:08:31,100 - INFO - ============================================================
+2026-03-29 23:08:31,101 - INFO - STEP 2: Login with Credentials
+2026-03-29 23:08:31,101 - INFO - ============================================================
+2026-03-29 23:08:31,101 - INFO - Waiting for login form...
+2026-03-29 23:08:34,102 - INFO - Looking for email field...
+2026-03-29 23:08:34,102 - DEBUG - Trying selector 1/4 for email field: app-text-field-Электрондық пошта
+2026-03-29 23:08:34,102 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element {'using': 'css selector', 'value': '[id="app-text-field-Электрондық пошта"]'}
+2026-03-29 23:08:34,109 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element HTTP/1.1" 200 0
+2026-03-29 23:08:34,109 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.15"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:34,109 - DEBUG - Finished Request
+2026-03-29 23:08:34,109 - INFO - Found email field using selector 1
+2026-03-29 23:08:34,109 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.15/clear {}
+2026-03-29 23:08:34,124 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.15/clear HTTP/1.1" 200 0
+2026-03-29 23:08:34,124 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:34,124 - DEBUG - Finished Request
+2026-03-29 23:08:34,125 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.15/value {'text': 'w.nurda@mail.ru', 'value': ['w', '.', 'n', 'u', 'r', 'd', 'a', '@', 'm', 'a', 'i', 'l', '.', 'r', 'u']}
+2026-03-29 23:08:34,166 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.15/value HTTP/1.1" 200 0
+2026-03-29 23:08:34,166 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:34,167 - DEBUG - Finished Request
+2026-03-29 23:08:34,167 - INFO - Entered email: w.nurda@mail.ru
+2026-03-29 23:08:34,267 - INFO - Looking for password field...
+2026-03-29 23:08:34,267 - DEBUG - Trying selector 1/4 for password field: app-text-field-Құпия сөз
+2026-03-29 23:08:34,268 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element {'using': 'css selector', 'value': '[id="app-text-field-Құпия сөз"]'}
+2026-03-29 23:08:34,274 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element HTTP/1.1" 200 0
+2026-03-29 23:08:34,274 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.14"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:34,274 - DEBUG - Finished Request
+2026-03-29 23:08:34,274 - INFO - Found password field using selector 1
+2026-03-29 23:08:34,274 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.14/clear {}
+2026-03-29 23:08:34,300 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.14/clear HTTP/1.1" 200 0
+2026-03-29 23:08:34,300 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:34,300 - DEBUG - Finished Request
+2026-03-29 23:08:34,300 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.14/value {'text': 'Ora200405$', 'value': ['O', 'r', 'a', '2', '0', '0', '4', '0', '5', '$']}
+2026-03-29 23:08:34,333 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.14/value HTTP/1.1" 200 0
+2026-03-29 23:08:34,334 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:34,334 - DEBUG - Finished Request
+2026-03-29 23:08:34,334 - INFO - Entered password
+2026-03-29 23:08:34,434 - INFO - Looking for login button in modal/form...
+2026-03-29 23:08:34,434 - DEBUG - Trying selector 1/5 for login button: //input[@type='password']/ancestor::form//button[contains(@class, 'bg-main-light-blue')]
+2026-03-29 23:08:34,435 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element {'using': 'xpath', 'value': "//input[@type='password']/ancestor::form//button[contains(@class, 'bg-main-light-blue')]"}
+2026-03-29 23:08:34,440 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element HTTP/1.1" 200 0
+2026-03-29 23:08:34,441 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.17"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:34,441 - DEBUG - Finished Request
+2026-03-29 23:08:34,441 - INFO - Found login button using selector 1
+2026-03-29 23:08:34,441 - DEBUG - POST http://localhost:49248/session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.17/click {}
+2026-03-29 23:08:34,472 - DEBUG - http://localhost:49248 "POST /session/336834a8009737e6c25ca812cd184186/element/f.6C507937C360F3E94EB7A050152C69E0.d.AB0594CC5A9C5C11E360C8AAC1C66B9F.e.17/click HTTP/1.1" 200 0
+2026-03-29 23:08:34,472 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:08:34,472 - DEBUG - Finished Request
+2026-03-29 23:08:34,472 - INFO - Clicked login button
+2026-03-29 23:08:34,472 - INFO - Login button clicked!
+2026-03-29 23:08:34,472 - INFO - Login completed successfully!
+2026-03-29 23:08:37,472 - INFO - 
+Processing lot 1/1
+2026-03-29 23:08:37,473 - INFO - ============================================================
+2026-03-29 23:08:37,473 - INFO - PROCESSING LOT: None
+2026-03-29 23:08:37,473 - INFO - ============================================================
+2026-03-29 23:08:37,473 - INFO - Waiting for mail.ru message with matching lot link...
+2026-03-29 23:08:37,473 - INFO - ============================================================
+2026-03-29 23:08:37,473 - INFO - WAITING FOR MAIL.RU LOT LINK
+2026-03-29 23:08:37,473 - INFO - ============================================================
+2026-03-29 23:08:37,473 - INFO - Accepting any tizilim auction room link from mail
+2026-03-29 23:08:38,098 - WARNING - Could not search mailbox
+2026-03-29 23:08:40,819 - WARNING - Could not search mailbox
+2026-03-29 23:08:43,518 - WARNING - Could not search mailbox
+2026-03-29 23:08:46,206 - WARNING - Could not search mailbox
+2026-03-29 23:08:48,926 - WARNING - Could not search mailbox
+2026-03-29 23:08:51,623 - WARNING - Could not search mailbox
+2026-03-29 23:08:54,402 - WARNING - Could not search mailbox
+2026-03-29 23:08:57,192 - WARNING - Could not search mailbox
+2026-03-29 23:08:59,907 - WARNING - Could not search mailbox
+2026-03-29 23:09:02,630 - WARNING - Could not search mailbox
+2026-03-29 23:09:05,337 - WARNING - Could not search mailbox
+2026-03-29 23:09:07,130 - DEBUG - DELETE http://localhost:49248/session/336834a8009737e6c25ca812cd184186 {}
+2026-03-29 23:09:07,130 - DEBUG - Resetting dropped connection: localhost
+2026-03-29 23:09:14,482 - INFO - Setting up Chrome WebDriver...
+2026-03-29 23:09:14,484 - INFO - ====== WebDriver manager ======
+2026-03-29 23:09:15,011 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-29 23:09:15,012 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-03-29 23:09:15,447 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15918
+2026-03-29 23:09:15,469 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-29 23:09:15,470 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-03-29 23:09:15,904 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15918
+2026-03-29 23:09:15,928 - INFO - Driver [C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-29 23:09:15,929 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe
+2026-03-29 23:09:15,973 - DEBUG - Started executable: `C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe` in a child process with pid: 15316 using 0 to output -3
+2026-03-29 23:09:16,498 - DEBUG - POST http://localhost:53356/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': 'normal', 'goog:chromeOptions': {'extensions': [], 'args': ['--start-maximized', '--ignore-certificate-errors', '--disable-blink-features=AutomationControlled']}}}}
+2026-03-29 23:09:16,498 - DEBUG - Starting new HTTP connection (1): localhost:53356
+2026-03-29 23:09:16,989 - DEBUG - http://localhost:53356 "POST /session HTTP/1.1" 200 0
+2026-03-29 23:09:16,989 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"146.0.7680.165","chrome":{"chromedriverVersion":"146.0.7680.165 (4b989da09e15a7dc0de0785cb5ff232aadae3f0f-refs/branch-heads/7680@{#2932})","userDataDir":"C:\\Users\\08D5~1\\AppData\\Local\\Temp\\scoped_dir15316_192401446"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:53360"},"goog:processID":3848,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"580807908cf6abba3c73d0e2c07e1133"}} | headers=HTTPHeaderDict({'Content-Length': '906', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:16,989 - DEBUG - Finished Request
+2026-03-29 23:09:16,989 - INFO - Chrome WebDriver ready
+2026-03-29 23:09:16,989 - INFO - ============================================================
+2026-03-29 23:09:16,989 - INFO - INITIAL TIZILIM LOGIN
+2026-03-29 23:09:16,990 - INFO - ============================================================
+2026-03-29 23:09:16,990 - INFO - ============================================================
+2026-03-29 23:09:16,990 - INFO - STEP 1: ECP Authorization
+2026-03-29 23:09:16,990 - INFO - ============================================================
+2026-03-29 23:09:16,990 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/url {'url': 'https://tizilim.gov.kz/auth/login'}
+2026-03-29 23:09:20,196 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/url HTTP/1.1" 200 0
+2026-03-29 23:09:20,196 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:20,196 - DEBUG - Finished Request
+2026-03-29 23:09:20,196 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/execute/sync {'script': 'return document.readyState', 'args': []}
+2026-03-29 23:09:20,199 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/execute/sync HTTP/1.1" 200 0
+2026-03-29 23:09:20,199 - DEBUG - Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:20,200 - DEBUG - Finished Request
+2026-03-29 23:09:20,200 - DEBUG - Page loaded completely
+2026-03-29 23:09:20,200 - INFO - Looking for terms checkbox...
+2026-03-29 23:09:20,200 - DEBUG - Trying selector 1/4 for terms checkbox: input[type='checkbox']
+2026-03-29 23:09:20,200 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:09:20,206 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element HTTP/1.1" 404 0
+2026-03-29 23:09:20,206 - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type='checkbox']\"}\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x42abca]\n\tchromedriver!(No symbol) [0x42ae6b]\n\tchromedriver!(No symbol) [0x46d0b2]\n\tchromedriver!(No symbol) [0x44db54]\n\tchromedriver!(No symbol) [0x46a9a5]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1243', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:20,206 - DEBUG - Finished Request
+2026-03-29 23:09:20,707 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:09:20,711 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element HTTP/1.1" 404 0
+2026-03-29 23:09:20,711 - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type='checkbox']\"}\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x42abca]\n\tchromedriver!(No symbol) [0x42ae6b]\n\tchromedriver!(No symbol) [0x46d0b2]\n\tchromedriver!(No symbol) [0x44db54]\n\tchromedriver!(No symbol) [0x46a9a5]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1243', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:20,711 - DEBUG - Finished Request
+2026-03-29 23:09:21,212 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:09:21,216 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element HTTP/1.1" 404 0
+2026-03-29 23:09:21,216 - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type='checkbox']\"}\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x42abca]\n\tchromedriver!(No symbol) [0x42ae6b]\n\tchromedriver!(No symbol) [0x46d0b2]\n\tchromedriver!(No symbol) [0x44db54]\n\tchromedriver!(No symbol) [0x46a9a5]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1243', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:21,216 - DEBUG - Finished Request
+2026-03-29 23:09:21,717 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:09:21,721 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element HTTP/1.1" 200 0
+2026-03-29 23:09:21,721 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.3"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:21,721 - DEBUG - Finished Request
+2026-03-29 23:09:21,721 - INFO - Found terms checkbox using selector 1
+2026-03-29 23:09:21,721 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.3/click {}
+2026-03-29 23:09:21,760 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.3/click HTTP/1.1" 200 0
+2026-03-29 23:09:21,761 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:21,761 - DEBUG - Finished Request
+2026-03-29 23:09:21,761 - INFO - Clicked terms checkbox
+2026-03-29 23:09:21,761 - INFO - Terms checkbox checked!
+2026-03-29 23:09:21,862 - INFO - Looking for ECP button...
+2026-03-29 23:09:21,862 - INFO - Starting NCALayer automation in background...
+2026-03-29 23:09:21,862 - INFO - NCALayer automation thread started
+2026-03-29 23:09:21,862 - DEBUG - Trying selector 1/4 for ECP button: button.v-btn.bg-main-light-blue
+2026-03-29 23:09:21,863 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element {'using': 'css selector', 'value': 'button.v-btn.bg-main-light-blue'}
+2026-03-29 23:09:21,868 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element HTTP/1.1" 200 0
+2026-03-29 23:09:21,869 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.7"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:21,869 - DEBUG - Finished Request
+2026-03-29 23:09:21,869 - INFO - Found ECP button using selector 1
+2026-03-29 23:09:21,869 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.7/click {}
+2026-03-29 23:09:21,907 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.7/click HTTP/1.1" 200 0
+2026-03-29 23:09:21,907 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:21,907 - DEBUG - Finished Request
+2026-03-29 23:09:21,907 - INFO - Clicked ECP button
+2026-03-29 23:09:21,907 - INFO - ECP button clicked!
+2026-03-29 23:09:21,907 - INFO - NCALayer automation is handling certificate selection and password...
+2026-03-29 23:09:21,908 - INFO - Waiting for ECP signing to complete...
+2026-03-29 23:09:21,913 - INFO - Fast NCALayer path: waiting for authentication dialog...
+2026-03-29 23:09:22,431 - INFO - Found window via pywinauto: NCALayer
+2026-03-29 23:09:22,493 - ERROR - Fast NCALayer automation failed: 
+Traceback (most recent call last):
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 234, in get_elem_interface
+    iface = cur_ptrn.QueryInterface(cls_name)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\comtypes\_post_coinit\unknwn.py", line 406, in QueryInterface
+    self.__com_QueryInterface(byref(iid), byref(p))  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+ValueError: NULL COM pointer access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\tizilim_clean\ncalayer_handler.py", line 348, in automate_ncalayer_dialog_fast
+    password_edit.set_edit_text(cert_password)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uia_controls.py", line 462, in set_edit_text
+    self.iface_value.SetValue(new_text)
+    ^^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 132, in __get__
+    value = self.fget(obj)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 252, in iface_value
+    return uia_defs.get_elem_interface(elem, "Value")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 236, in get_elem_interface
+    raise NoPatternInterfaceError()
+pywinauto.uia_defines.NoPatternInterfaceError
+2026-03-29 23:09:22,495 - WARNING - Fast backend unavailable or failed, falling back to PyAutoGUI flow
+2026-03-29 23:09:22,495 - INFO - Step 1: Waiting for NCALayer authentication dialog...
+2026-03-29 23:09:22,495 - INFO - Waiting for window with keywords: ['NCALayer', 'Аутентификация']
+2026-03-29 23:09:22,521 - INFO - Found window via pywinauto: NCALayer
+2026-03-29 23:09:22,622 - INFO - Step 2: Focusing password field...
+2026-03-29 23:09:22,776 - INFO - Step 3: Typing password...
+2026-03-29 23:09:23,082 - INFO - Step 4: Clicking open button...
+2026-03-29 23:09:23,235 - INFO - Step 5: Waiting for key selection window...
+2026-03-29 23:09:23,540 - INFO - Using key selection window fallback: NCALayer
+2026-03-29 23:09:23,845 - INFO - NCALayer automation completed successfully!
+2026-03-29 23:09:23,896 - INFO - NCALayer thread finished, waiting for all keypresses to complete...
+2026-03-29 23:09:23,946 - INFO - ECP authorization completed!
+2026-03-29 23:09:24,047 - INFO - ============================================================
+2026-03-29 23:09:24,047 - INFO - STEP 2: Login with Credentials
+2026-03-29 23:09:24,047 - INFO - ============================================================
+2026-03-29 23:09:24,047 - INFO - Waiting for login form...
+2026-03-29 23:09:27,048 - INFO - Looking for email field...
+2026-03-29 23:09:27,048 - DEBUG - Trying selector 1/4 for email field: app-text-field-Электрондық пошта
+2026-03-29 23:09:27,048 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element {'using': 'css selector', 'value': '[id="app-text-field-Электрондық пошта"]'}
+2026-03-29 23:09:27,055 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element HTTP/1.1" 200 0
+2026-03-29 23:09:27,055 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.14"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:27,055 - DEBUG - Finished Request
+2026-03-29 23:09:27,055 - INFO - Found email field using selector 1
+2026-03-29 23:09:27,056 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.14/clear {}
+2026-03-29 23:09:27,071 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.14/clear HTTP/1.1" 200 0
+2026-03-29 23:09:27,071 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:27,071 - DEBUG - Finished Request
+2026-03-29 23:09:27,071 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.14/value {'text': 'w.nurda@mail.ru', 'value': ['w', '.', 'n', 'u', 'r', 'd', 'a', '@', 'm', 'a', 'i', 'l', '.', 'r', 'u']}
+2026-03-29 23:09:27,114 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.14/value HTTP/1.1" 200 0
+2026-03-29 23:09:27,115 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:27,115 - DEBUG - Finished Request
+2026-03-29 23:09:27,115 - INFO - Entered email: w.nurda@mail.ru
+2026-03-29 23:09:27,215 - INFO - Looking for password field...
+2026-03-29 23:09:27,215 - DEBUG - Trying selector 1/4 for password field: app-text-field-Құпия сөз
+2026-03-29 23:09:27,216 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element {'using': 'css selector', 'value': '[id="app-text-field-Құпия сөз"]'}
+2026-03-29 23:09:27,222 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element HTTP/1.1" 200 0
+2026-03-29 23:09:27,222 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.13"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:27,222 - DEBUG - Finished Request
+2026-03-29 23:09:27,223 - INFO - Found password field using selector 1
+2026-03-29 23:09:27,223 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.13/clear {}
+2026-03-29 23:09:27,234 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.13/clear HTTP/1.1" 200 0
+2026-03-29 23:09:27,234 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:27,235 - DEBUG - Finished Request
+2026-03-29 23:09:27,235 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.13/value {'text': 'Ora200405$', 'value': ['O', 'r', 'a', '2', '0', '0', '4', '0', '5', '$']}
+2026-03-29 23:09:27,269 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.13/value HTTP/1.1" 200 0
+2026-03-29 23:09:27,269 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:27,269 - DEBUG - Finished Request
+2026-03-29 23:09:27,269 - INFO - Entered password
+2026-03-29 23:09:27,370 - INFO - Looking for login button in modal/form...
+2026-03-29 23:09:27,370 - DEBUG - Trying selector 1/5 for login button: //input[@type='password']/ancestor::form//button[contains(@class, 'bg-main-light-blue')]
+2026-03-29 23:09:27,370 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element {'using': 'xpath', 'value': "//input[@type='password']/ancestor::form//button[contains(@class, 'bg-main-light-blue')]"}
+2026-03-29 23:09:27,377 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element HTTP/1.1" 200 0
+2026-03-29 23:09:27,377 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.16"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:27,377 - DEBUG - Finished Request
+2026-03-29 23:09:27,377 - INFO - Found login button using selector 1
+2026-03-29 23:09:27,377 - DEBUG - POST http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.16/click {}
+2026-03-29 23:09:27,409 - DEBUG - http://localhost:53356 "POST /session/580807908cf6abba3c73d0e2c07e1133/element/f.C9BFBC570A681F40F0E05C5E2B6773AE.d.916C94C0C0A2B826EA8DA02CF1EA4932.e.16/click HTTP/1.1" 200 0
+2026-03-29 23:09:27,410 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:09:27,410 - DEBUG - Finished Request
+2026-03-29 23:09:27,410 - INFO - Clicked login button
+2026-03-29 23:09:27,410 - INFO - Login button clicked!
+2026-03-29 23:09:27,410 - INFO - Login completed successfully!
+2026-03-29 23:09:30,411 - INFO - 
+Processing lot 1/1
+2026-03-29 23:09:30,411 - INFO - ============================================================
+2026-03-29 23:09:30,411 - INFO - PROCESSING LOT: None
+2026-03-29 23:09:30,411 - INFO - ============================================================
+2026-03-29 23:09:30,411 - INFO - Waiting for mail.ru message with matching lot link...
+2026-03-29 23:09:30,412 - INFO - ============================================================
+2026-03-29 23:09:30,412 - INFO - WAITING FOR MAIL.RU LOT LINK
+2026-03-29 23:09:30,412 - INFO - ============================================================
+2026-03-29 23:09:30,412 - INFO - Accepting any tizilim auction room link from mail
+2026-03-29 23:09:31,339 - WARNING - Could not search mailbox
+2026-03-29 23:09:34,125 - WARNING - Could not search mailbox
+2026-03-29 23:09:36,866 - WARNING - Could not search mailbox
+2026-03-29 23:09:39,617 - WARNING - Could not search mailbox
+2026-03-29 23:09:42,288 - WARNING - Could not search mailbox
+2026-03-29 23:09:45,010 - WARNING - Could not search mailbox
+2026-03-29 23:09:47,704 - WARNING - Could not search mailbox
+2026-03-29 23:09:50,403 - WARNING - Could not search mailbox
+2026-03-29 23:09:53,103 - WARNING - Could not search mailbox
+2026-03-29 23:09:54,775 - DEBUG - DELETE http://localhost:53356/session/580807908cf6abba3c73d0e2c07e1133 {}
+2026-03-29 23:09:54,775 - DEBUG - Resetting dropped connection: localhost
+2026-03-29 23:11:27,292 - INFO - Setting up Chrome WebDriver...
+2026-03-29 23:11:27,294 - INFO - ====== WebDriver manager ======
+2026-03-29 23:11:27,825 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-29 23:11:27,827 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-03-29 23:11:28,266 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15918
+2026-03-29 23:11:28,288 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-29 23:11:28,289 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-03-29 23:11:28,722 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15918
+2026-03-29 23:11:28,747 - INFO - Driver [C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-29 23:11:28,747 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe
+2026-03-29 23:11:28,791 - DEBUG - Started executable: `C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe` in a child process with pid: 588 using 0 to output -3
+2026-03-29 23:11:29,320 - DEBUG - POST http://localhost:53042/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': 'normal', 'goog:chromeOptions': {'extensions': [], 'args': ['--start-maximized', '--ignore-certificate-errors', '--disable-blink-features=AutomationControlled']}}}}
+2026-03-29 23:11:29,320 - DEBUG - Starting new HTTP connection (1): localhost:53042
+2026-03-29 23:11:29,779 - DEBUG - http://localhost:53042 "POST /session HTTP/1.1" 200 0
+2026-03-29 23:11:29,779 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"146.0.7680.165","chrome":{"chromedriverVersion":"146.0.7680.165 (4b989da09e15a7dc0de0785cb5ff232aadae3f0f-refs/branch-heads/7680@{#2932})","userDataDir":"C:\\Users\\08D5~1\\AppData\\Local\\Temp\\scoped_dir588_1601141248"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:53045"},"goog:processID":17748,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"532af0d2cd524615d961fd33da060e1e"}} | headers=HTTPHeaderDict({'Content-Length': '906', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:29,780 - DEBUG - Finished Request
+2026-03-29 23:11:29,780 - INFO - Chrome WebDriver ready
+2026-03-29 23:11:29,780 - INFO - ============================================================
+2026-03-29 23:11:29,780 - INFO - INITIAL TIZILIM LOGIN
+2026-03-29 23:11:29,780 - INFO - ============================================================
+2026-03-29 23:11:29,780 - INFO - ============================================================
+2026-03-29 23:11:29,780 - INFO - STEP 1: ECP Authorization
+2026-03-29 23:11:29,780 - INFO - ============================================================
+2026-03-29 23:11:29,781 - DEBUG - POST http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e/url {'url': 'https://tizilim.gov.kz/auth/login'}
+2026-03-29 23:11:33,048 - DEBUG - http://localhost:53042 "POST /session/532af0d2cd524615d961fd33da060e1e/url HTTP/1.1" 200 0
+2026-03-29 23:11:33,048 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:33,049 - DEBUG - Finished Request
+2026-03-29 23:11:33,049 - DEBUG - POST http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e/execute/sync {'script': 'return document.readyState', 'args': []}
+2026-03-29 23:11:33,052 - DEBUG - http://localhost:53042 "POST /session/532af0d2cd524615d961fd33da060e1e/execute/sync HTTP/1.1" 200 0
+2026-03-29 23:11:33,052 - DEBUG - Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:33,053 - DEBUG - Finished Request
+2026-03-29 23:11:33,053 - DEBUG - Page loaded completely
+2026-03-29 23:11:33,053 - INFO - Looking for terms checkbox...
+2026-03-29 23:11:33,053 - DEBUG - Trying selector 1/4 for terms checkbox: input[type='checkbox']
+2026-03-29 23:11:33,053 - DEBUG - POST http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:11:33,059 - DEBUG - http://localhost:53042 "POST /session/532af0d2cd524615d961fd33da060e1e/element HTTP/1.1" 404 0
+2026-03-29 23:11:33,059 - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type='checkbox']\"}\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x42abca]\n\tchromedriver!(No symbol) [0x42ae6b]\n\tchromedriver!(No symbol) [0x46d0b2]\n\tchromedriver!(No symbol) [0x44db54]\n\tchromedriver!(No symbol) [0x46a9a5]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1243', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:33,060 - DEBUG - Finished Request
+2026-03-29 23:11:33,560 - DEBUG - POST http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:11:33,565 - DEBUG - http://localhost:53042 "POST /session/532af0d2cd524615d961fd33da060e1e/element HTTP/1.1" 200 0
+2026-03-29 23:11:33,565 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.52CBF7BD10D6E6ED92B0EF557BDEA86F.d.83C1520B1178F026593843860D3F69DD.e.6"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:33,565 - DEBUG - Finished Request
+2026-03-29 23:11:33,565 - INFO - Found terms checkbox using selector 1
+2026-03-29 23:11:33,565 - DEBUG - POST http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e/element/f.52CBF7BD10D6E6ED92B0EF557BDEA86F.d.83C1520B1178F026593843860D3F69DD.e.6/click {}
+2026-03-29 23:11:33,603 - DEBUG - http://localhost:53042 "POST /session/532af0d2cd524615d961fd33da060e1e/element/f.52CBF7BD10D6E6ED92B0EF557BDEA86F.d.83C1520B1178F026593843860D3F69DD.e.6/click HTTP/1.1" 200 0
+2026-03-29 23:11:33,603 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:33,603 - DEBUG - Finished Request
+2026-03-29 23:11:33,604 - INFO - Clicked terms checkbox
+2026-03-29 23:11:33,604 - INFO - Terms checkbox checked!
+2026-03-29 23:11:33,704 - INFO - Looking for ECP button...
+2026-03-29 23:11:33,704 - INFO - Starting NCALayer automation in background...
+2026-03-29 23:11:33,705 - INFO - NCALayer automation thread started
+2026-03-29 23:11:33,705 - DEBUG - Trying selector 1/4 for ECP button: button.v-btn.bg-main-light-blue
+2026-03-29 23:11:33,705 - DEBUG - POST http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e/element {'using': 'css selector', 'value': 'button.v-btn.bg-main-light-blue'}
+2026-03-29 23:11:33,712 - DEBUG - http://localhost:53042 "POST /session/532af0d2cd524615d961fd33da060e1e/element HTTP/1.1" 200 0
+2026-03-29 23:11:33,712 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.52CBF7BD10D6E6ED92B0EF557BDEA86F.d.83C1520B1178F026593843860D3F69DD.e.7"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:33,712 - DEBUG - Finished Request
+2026-03-29 23:11:33,712 - INFO - Found ECP button using selector 1
+2026-03-29 23:11:33,712 - DEBUG - POST http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e/element/f.52CBF7BD10D6E6ED92B0EF557BDEA86F.d.83C1520B1178F026593843860D3F69DD.e.7/click {}
+2026-03-29 23:11:33,751 - DEBUG - http://localhost:53042 "POST /session/532af0d2cd524615d961fd33da060e1e/element/f.52CBF7BD10D6E6ED92B0EF557BDEA86F.d.83C1520B1178F026593843860D3F69DD.e.7/click HTTP/1.1" 200 0
+2026-03-29 23:11:33,751 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:33,751 - DEBUG - Finished Request
+2026-03-29 23:11:33,751 - INFO - Clicked ECP button
+2026-03-29 23:11:33,751 - INFO - ECP button clicked!
+2026-03-29 23:11:33,751 - INFO - NCALayer automation is handling certificate selection and password...
+2026-03-29 23:11:33,751 - INFO - Waiting for ECP signing to complete...
+2026-03-29 23:11:33,755 - INFO - Fast NCALayer path: waiting for authentication dialog...
+2026-03-29 23:11:34,273 - INFO - Found window via pywinauto: NCALayer
+2026-03-29 23:11:34,336 - ERROR - Fast NCALayer automation failed: 
+Traceback (most recent call last):
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 234, in get_elem_interface
+    iface = cur_ptrn.QueryInterface(cls_name)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\comtypes\_post_coinit\unknwn.py", line 406, in QueryInterface
+    self.__com_QueryInterface(byref(iid), byref(p))  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+ValueError: NULL COM pointer access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\tizilim_clean\ncalayer_handler.py", line 348, in automate_ncalayer_dialog_fast
+    password_edit.set_edit_text(cert_password)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uia_controls.py", line 462, in set_edit_text
+    self.iface_value.SetValue(new_text)
+    ^^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 132, in __get__
+    value = self.fget(obj)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 252, in iface_value
+    return uia_defs.get_elem_interface(elem, "Value")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 236, in get_elem_interface
+    raise NoPatternInterfaceError()
+pywinauto.uia_defines.NoPatternInterfaceError
+2026-03-29 23:11:34,338 - WARNING - Fast backend unavailable or failed, falling back to PyAutoGUI flow
+2026-03-29 23:11:34,338 - INFO - Step 1: Waiting for NCALayer authentication dialog...
+2026-03-29 23:11:34,338 - INFO - Waiting for window with keywords: ['NCALayer', 'Аутентификация']
+2026-03-29 23:11:34,365 - INFO - Found window via pywinauto: NCALayer
+2026-03-29 23:11:34,468 - INFO - Step 2: Focusing password field...
+2026-03-29 23:11:34,624 - INFO - Step 3: Typing password...
+2026-03-29 23:11:34,933 - INFO - Step 4: Clicking open button...
+2026-03-29 23:11:35,087 - INFO - Step 5: Waiting for key selection window...
+2026-03-29 23:11:35,087 - INFO - Using key selection window fallback: NCALayer
+2026-03-29 23:11:35,391 - INFO - NCALayer automation completed successfully!
+2026-03-29 23:11:35,442 - INFO - NCALayer thread finished, waiting for all keypresses to complete...
+2026-03-29 23:11:35,492 - INFO - ECP authorization completed!
+2026-03-29 23:11:35,592 - INFO - ============================================================
+2026-03-29 23:11:35,592 - INFO - STEP 2: Login with Credentials
+2026-03-29 23:11:35,592 - INFO - ============================================================
+2026-03-29 23:11:35,592 - INFO - Waiting for login form...
+2026-03-29 23:11:38,593 - INFO - Looking for email field...
+2026-03-29 23:11:38,593 - DEBUG - Trying selector 1/4 for email field: app-text-field-Электрондық пошта
+2026-03-29 23:11:38,593 - DEBUG - POST http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e/element {'using': 'css selector', 'value': '[id="app-text-field-Электрондық пошта"]'}
+2026-03-29 23:11:38,595 - DEBUG - http://localhost:53042 "POST /session/532af0d2cd524615d961fd33da060e1e/element HTTP/1.1" 404 0
+2026-03-29 23:11:38,595 - DEBUG - Remote response: status=404 | data={"value":{"error":"invalid session id","message":"invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: not connected to DevTools\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x3d108e]\n\tchromedriver!(No symbol) [0x3efbe9]\n\tchromedriver!(No symbol) [0x45450c]\n\tchromedriver!(No symbol) [0x46a309]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1217', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:38,595 - DEBUG - Finished Request
+2026-03-29 23:11:38,595 - ERROR - Error in credential authorization: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x5fcdf3+10b03]
+	chromedriver!GetHandleVerifier [0x5fcf24+10c34]
+	chromedriver!(No symbol) [0x3e2120]
+	chromedriver!(No symbol) [0x3d108e]
+	chromedriver!(No symbol) [0x3efbe9]
+	chromedriver!(No symbol) [0x45450c]
+	chromedriver!(No symbol) [0x46a309]
+	chromedriver!(No symbol) [0x44d8a6]
+	chromedriver!(No symbol) [0x420229]
+	chromedriver!(No symbol) [0x420fe4]
+	chromedriver!GetHandleVerifier [0x8648b9+2785c9]
+	chromedriver!GetHandleVerifier [0x85feb5+273bc5]
+	chromedriver!GetHandleVerifier [0x87e06b+291d7b]
+	chromedriver!GetHandleVerifier [0x615cc8+299d8]
+	chromedriver!GetHandleVerifier [0x61d9fd+3170d]
+	chromedriver!GetHandleVerifier [0x6058c8+195d8]
+	chromedriver!GetHandleVerifier [0x605a92+197a2]
+	chromedriver!GetHandleVerifier [0x5eee9a+2baa]
+	KERNEL32!BaseThreadInitThunk [0x769d5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]
+Traceback (most recent call last):
+  File "D:\tizilim_clean\login.py", line 159, in authorize_with_credentials
+    email_field = find_element_with_fallbacks(driver, email_selectors, "email field", timeout=15)
+  File "D:\tizilim_clean\utils.py", line 73, in find_element_with_fallbacks
+    element = wait.until(EC.presence_of_element_located((by, selector)))
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 92, in _predicate
+    return driver.find_element(*locator)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 816, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x5fcdf3+10b03]
+	chromedriver!GetHandleVerifier [0x5fcf24+10c34]
+	chromedriver!(No symbol) [0x3e2120]
+	chromedriver!(No symbol) [0x3d108e]
+	chromedriver!(No symbol) [0x3efbe9]
+	chromedriver!(No symbol) [0x45450c]
+	chromedriver!(No symbol) [0x46a309]
+	chromedriver!(No symbol) [0x44d8a6]
+	chromedriver!(No symbol) [0x420229]
+	chromedriver!(No symbol) [0x420fe4]
+	chromedriver!GetHandleVerifier [0x8648b9+2785c9]
+	chromedriver!GetHandleVerifier [0x85feb5+273bc5]
+	chromedriver!GetHandleVerifier [0x87e06b+291d7b]
+	chromedriver!GetHandleVerifier [0x615cc8+299d8]
+	chromedriver!GetHandleVerifier [0x61d9fd+3170d]
+	chromedriver!GetHandleVerifier [0x6058c8+195d8]
+	chromedriver!GetHandleVerifier [0x605a92+197a2]
+	chromedriver!GetHandleVerifier [0x5eee9a+2baa]
+	KERNEL32!BaseThreadInitThunk [0x769d5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]
+
+2026-03-29 23:11:38,598 - ERROR - Error: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x5fcdf3+10b03]
+	chromedriver!GetHandleVerifier [0x5fcf24+10c34]
+	chromedriver!(No symbol) [0x3e2120]
+	chromedriver!(No symbol) [0x3d108e]
+	chromedriver!(No symbol) [0x3efbe9]
+	chromedriver!(No symbol) [0x45450c]
+	chromedriver!(No symbol) [0x46a309]
+	chromedriver!(No symbol) [0x44d8a6]
+	chromedriver!(No symbol) [0x420229]
+	chromedriver!(No symbol) [0x420fe4]
+	chromedriver!GetHandleVerifier [0x8648b9+2785c9]
+	chromedriver!GetHandleVerifier [0x85feb5+273bc5]
+	chromedriver!GetHandleVerifier [0x87e06b+291d7b]
+	chromedriver!GetHandleVerifier [0x615cc8+299d8]
+	chromedriver!GetHandleVerifier [0x61d9fd+3170d]
+	chromedriver!GetHandleVerifier [0x6058c8+195d8]
+	chromedriver!GetHandleVerifier [0x605a92+197a2]
+	chromedriver!GetHandleVerifier [0x5eee9a+2baa]
+	KERNEL32!BaseThreadInitThunk [0x769d5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]
+Traceback (most recent call last):
+  File "D:\tizilim_clean\login.py", line 277, in main
+    login_to_tizilim(driver, wait)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\login.py", line 210, in login_to_tizilim
+    authorize_with_credentials(driver, wait)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\login.py", line 159, in authorize_with_credentials
+    email_field = find_element_with_fallbacks(driver, email_selectors, "email field", timeout=15)
+  File "D:\tizilim_clean\utils.py", line 73, in find_element_with_fallbacks
+    element = wait.until(EC.presence_of_element_located((by, selector)))
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 92, in _predicate
+    return driver.find_element(*locator)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 816, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x5fcdf3+10b03]
+	chromedriver!GetHandleVerifier [0x5fcf24+10c34]
+	chromedriver!(No symbol) [0x3e2120]
+	chromedriver!(No symbol) [0x3d108e]
+	chromedriver!(No symbol) [0x3efbe9]
+	chromedriver!(No symbol) [0x45450c]
+	chromedriver!(No symbol) [0x46a309]
+	chromedriver!(No symbol) [0x44d8a6]
+	chromedriver!(No symbol) [0x420229]
+	chromedriver!(No symbol) [0x420fe4]
+	chromedriver!GetHandleVerifier [0x8648b9+2785c9]
+	chromedriver!GetHandleVerifier [0x85feb5+273bc5]
+	chromedriver!GetHandleVerifier [0x87e06b+291d7b]
+	chromedriver!GetHandleVerifier [0x615cc8+299d8]
+	chromedriver!GetHandleVerifier [0x61d9fd+3170d]
+	chromedriver!GetHandleVerifier [0x6058c8+195d8]
+	chromedriver!GetHandleVerifier [0x605a92+197a2]
+	chromedriver!GetHandleVerifier [0x5eee9a+2baa]
+	KERNEL32!BaseThreadInitThunk [0x769d5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]
+
+2026-03-29 23:11:39,579 - DEBUG - DELETE http://localhost:53042/session/532af0d2cd524615d961fd33da060e1e {}
+2026-03-29 23:11:39,581 - DEBUG - Incremented Retry for (url='/session/532af0d2cd524615d961fd33da060e1e'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2026-03-29 23:11:39,581 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None)': /session/532af0d2cd524615d961fd33da060e1e
+2026-03-29 23:11:39,581 - DEBUG - Starting new HTTP connection (2): localhost:53042
+2026-03-29 23:11:45,881 - INFO - Setting up Chrome WebDriver...
+2026-03-29 23:11:45,883 - INFO - ====== WebDriver manager ======
+2026-03-29 23:11:46,412 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-29 23:11:46,413 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-03-29 23:11:46,822 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15918
+2026-03-29 23:11:46,845 - INFO - Get LATEST chromedriver version for google-chrome
+2026-03-29 23:11:46,845 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-03-29 23:11:47,250 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15918
+2026-03-29 23:11:47,272 - INFO - Driver [C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe] found in cache
+2026-03-29 23:11:47,273 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe
+2026-03-29 23:11:47,316 - DEBUG - Started executable: `C:\Users\Алан\.wdm\drivers\chromedriver\win64\146.0.7680.165\chromedriver-win32/chromedriver.exe` in a child process with pid: 10872 using 0 to output -3
+2026-03-29 23:11:47,860 - DEBUG - POST http://localhost:64956/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': 'normal', 'goog:chromeOptions': {'extensions': [], 'args': ['--start-maximized', '--ignore-certificate-errors', '--disable-blink-features=AutomationControlled']}}}}
+2026-03-29 23:11:47,860 - DEBUG - Starting new HTTP connection (1): localhost:64956
+2026-03-29 23:11:48,332 - DEBUG - http://localhost:64956 "POST /session HTTP/1.1" 200 0
+2026-03-29 23:11:48,332 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"146.0.7680.165","chrome":{"chromedriverVersion":"146.0.7680.165 (4b989da09e15a7dc0de0785cb5ff232aadae3f0f-refs/branch-heads/7680@{#2932})","userDataDir":"C:\\Users\\08D5~1\\AppData\\Local\\Temp\\scoped_dir10872_1971821655"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:64960"},"goog:processID":6836,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"3be1c75f9c6349796cc9d0d3a4167118"}} | headers=HTTPHeaderDict({'Content-Length': '907', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:48,333 - DEBUG - Finished Request
+2026-03-29 23:11:48,333 - INFO - Chrome WebDriver ready
+2026-03-29 23:11:48,333 - INFO - ============================================================
+2026-03-29 23:11:48,333 - INFO - INITIAL TIZILIM LOGIN
+2026-03-29 23:11:48,333 - INFO - ============================================================
+2026-03-29 23:11:48,333 - INFO - ============================================================
+2026-03-29 23:11:48,333 - INFO - STEP 1: ECP Authorization
+2026-03-29 23:11:48,333 - INFO - ============================================================
+2026-03-29 23:11:48,333 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/url {'url': 'https://tizilim.gov.kz/auth/login'}
+2026-03-29 23:11:52,203 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/url HTTP/1.1" 200 0
+2026-03-29 23:11:52,203 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:52,203 - DEBUG - Finished Request
+2026-03-29 23:11:52,204 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/execute/sync {'script': 'return document.readyState', 'args': []}
+2026-03-29 23:11:52,207 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/execute/sync HTTP/1.1" 200 0
+2026-03-29 23:11:52,207 - DEBUG - Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:52,207 - DEBUG - Finished Request
+2026-03-29 23:11:52,207 - DEBUG - Page loaded completely
+2026-03-29 23:11:52,207 - INFO - Looking for terms checkbox...
+2026-03-29 23:11:52,207 - DEBUG - Trying selector 1/4 for terms checkbox: input[type='checkbox']
+2026-03-29 23:11:52,207 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:11:52,213 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element HTTP/1.1" 404 0
+2026-03-29 23:11:52,213 - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type='checkbox']\"}\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x42abca]\n\tchromedriver!(No symbol) [0x42ae6b]\n\tchromedriver!(No symbol) [0x46d0b2]\n\tchromedriver!(No symbol) [0x44db54]\n\tchromedriver!(No symbol) [0x46a9a5]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1243', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:52,213 - DEBUG - Finished Request
+2026-03-29 23:11:52,714 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:11:52,718 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element HTTP/1.1" 404 0
+2026-03-29 23:11:52,718 - DEBUG - Remote response: status=404 | data={"value":{"error":"no such element","message":"no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[type='checkbox']\"}\n  (Session info: chrome=146.0.7680.165)","stacktrace":"\tchromedriver!GetHandleVerifier [0x5fcdf3+10b03]\n\tchromedriver!GetHandleVerifier [0x5fcf24+10c34]\n\tchromedriver!(No symbol) [0x3e2120]\n\tchromedriver!(No symbol) [0x42abca]\n\tchromedriver!(No symbol) [0x42ae6b]\n\tchromedriver!(No symbol) [0x46d0b2]\n\tchromedriver!(No symbol) [0x44db54]\n\tchromedriver!(No symbol) [0x46a9a5]\n\tchromedriver!(No symbol) [0x44d8a6]\n\tchromedriver!(No symbol) [0x420229]\n\tchromedriver!(No symbol) [0x420fe4]\n\tchromedriver!GetHandleVerifier [0x8648b9+2785c9]\n\tchromedriver!GetHandleVerifier [0x85feb5+273bc5]\n\tchromedriver!GetHandleVerifier [0x87e06b+291d7b]\n\tchromedriver!GetHandleVerifier [0x615cc8+299d8]\n\tchromedriver!GetHandleVerifier [0x61d9fd+3170d]\n\tchromedriver!GetHandleVerifier [0x6058c8+195d8]\n\tchromedriver!GetHandleVerifier [0x605a92+197a2]\n\tchromedriver!GetHandleVerifier [0x5eee9a+2baa]\n\tKERNEL32!BaseThreadInitThunk [0x769d5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x77b3d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x77b3d7c1+231]\n"}} | headers=HTTPHeaderDict({'Content-Length': '1243', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:52,719 - DEBUG - Finished Request
+2026-03-29 23:11:53,219 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element {'using': 'css selector', 'value': "input[type='checkbox']"}
+2026-03-29 23:11:53,223 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element HTTP/1.1" 200 0
+2026-03-29 23:11:53,223 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.4"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:53,223 - DEBUG - Finished Request
+2026-03-29 23:11:53,223 - INFO - Found terms checkbox using selector 1
+2026-03-29 23:11:53,224 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.4/click {}
+2026-03-29 23:11:53,262 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.4/click HTTP/1.1" 200 0
+2026-03-29 23:11:53,262 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:53,262 - DEBUG - Finished Request
+2026-03-29 23:11:53,262 - INFO - Clicked terms checkbox
+2026-03-29 23:11:53,262 - INFO - Terms checkbox checked!
+2026-03-29 23:11:53,363 - INFO - Looking for ECP button...
+2026-03-29 23:11:53,363 - INFO - Starting NCALayer automation in background...
+2026-03-29 23:11:53,364 - INFO - NCALayer automation thread started
+2026-03-29 23:11:53,364 - DEBUG - Trying selector 1/4 for ECP button: button.v-btn.bg-main-light-blue
+2026-03-29 23:11:53,364 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element {'using': 'css selector', 'value': 'button.v-btn.bg-main-light-blue'}
+2026-03-29 23:11:53,370 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element HTTP/1.1" 200 0
+2026-03-29 23:11:53,370 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.7"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:53,370 - DEBUG - Finished Request
+2026-03-29 23:11:53,370 - INFO - Found ECP button using selector 1
+2026-03-29 23:11:53,370 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.7/click {}
+2026-03-29 23:11:53,408 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.7/click HTTP/1.1" 200 0
+2026-03-29 23:11:53,408 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:53,408 - DEBUG - Finished Request
+2026-03-29 23:11:53,409 - INFO - Clicked ECP button
+2026-03-29 23:11:53,409 - INFO - ECP button clicked!
+2026-03-29 23:11:53,409 - INFO - NCALayer automation is handling certificate selection and password...
+2026-03-29 23:11:53,409 - INFO - Waiting for ECP signing to complete...
+2026-03-29 23:11:53,414 - INFO - Fast NCALayer path: waiting for authentication dialog...
+2026-03-29 23:11:54,013 - INFO - Found window via pywinauto: NCALayer
+2026-03-29 23:11:54,076 - ERROR - Fast NCALayer automation failed: 
+Traceback (most recent call last):
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 234, in get_elem_interface
+    iface = cur_ptrn.QueryInterface(cls_name)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\comtypes\_post_coinit\unknwn.py", line 406, in QueryInterface
+    self.__com_QueryInterface(byref(iid), byref(p))  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+ValueError: NULL COM pointer access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\tizilim_clean\ncalayer_handler.py", line 348, in automate_ncalayer_dialog_fast
+    password_edit.set_edit_text(cert_password)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uia_controls.py", line 462, in set_edit_text
+    self.iface_value.SetValue(new_text)
+    ^^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 132, in __get__
+    value = self.fget(obj)
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 252, in iface_value
+    return uia_defs.get_elem_interface(elem, "Value")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\tizilim_clean\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 236, in get_elem_interface
+    raise NoPatternInterfaceError()
+pywinauto.uia_defines.NoPatternInterfaceError
+2026-03-29 23:11:54,078 - WARNING - Fast backend unavailable or failed, falling back to PyAutoGUI flow
+2026-03-29 23:11:54,078 - INFO - Step 1: Waiting for NCALayer authentication dialog...
+2026-03-29 23:11:54,078 - INFO - Waiting for window with keywords: ['NCALayer', 'Аутентификация']
+2026-03-29 23:11:54,106 - INFO - Found window via pywinauto: NCALayer
+2026-03-29 23:11:54,207 - INFO - Step 2: Focusing password field...
+2026-03-29 23:11:54,361 - INFO - Step 3: Typing password...
+2026-03-29 23:11:54,667 - INFO - Step 4: Clicking open button...
+2026-03-29 23:11:54,824 - INFO - Step 5: Waiting for key selection window...
+2026-03-29 23:11:55,078 - INFO - Using key selection window fallback: NCALayer
+2026-03-29 23:11:55,384 - INFO - NCALayer automation completed successfully!
+2026-03-29 23:11:55,435 - INFO - NCALayer thread finished, waiting for all keypresses to complete...
+2026-03-29 23:11:55,485 - INFO - ECP authorization completed!
+2026-03-29 23:11:55,586 - INFO - ============================================================
+2026-03-29 23:11:55,586 - INFO - STEP 2: Login with Credentials
+2026-03-29 23:11:55,586 - INFO - ============================================================
+2026-03-29 23:11:55,586 - INFO - Waiting for login form...
+2026-03-29 23:11:58,586 - INFO - Looking for email field...
+2026-03-29 23:11:58,587 - DEBUG - Trying selector 1/4 for email field: app-text-field-Электрондық пошта
+2026-03-29 23:11:58,587 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element {'using': 'css selector', 'value': '[id="app-text-field-Электрондық пошта"]'}
+2026-03-29 23:11:58,593 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element HTTP/1.1" 200 0
+2026-03-29 23:11:58,594 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.14"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:58,594 - DEBUG - Finished Request
+2026-03-29 23:11:58,594 - INFO - Found email field using selector 1
+2026-03-29 23:11:58,594 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.14/clear {}
+2026-03-29 23:11:58,609 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.14/clear HTTP/1.1" 200 0
+2026-03-29 23:11:58,609 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:58,609 - DEBUG - Finished Request
+2026-03-29 23:11:58,609 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.14/value {'text': 'w.nurda@mail.ru', 'value': ['w', '.', 'n', 'u', 'r', 'd', 'a', '@', 'm', 'a', 'i', 'l', '.', 'r', 'u']}
+2026-03-29 23:11:58,664 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.14/value HTTP/1.1" 200 0
+2026-03-29 23:11:58,665 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:58,665 - DEBUG - Finished Request
+2026-03-29 23:11:58,665 - INFO - Entered email: w.nurda@mail.ru
+2026-03-29 23:11:58,765 - INFO - Looking for password field...
+2026-03-29 23:11:58,765 - DEBUG - Trying selector 1/4 for password field: app-text-field-Құпия сөз
+2026-03-29 23:11:58,766 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element {'using': 'css selector', 'value': '[id="app-text-field-Құпия сөз"]'}
+2026-03-29 23:11:58,772 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element HTTP/1.1" 200 0
+2026-03-29 23:11:58,772 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.13"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:58,772 - DEBUG - Finished Request
+2026-03-29 23:11:58,772 - INFO - Found password field using selector 1
+2026-03-29 23:11:58,773 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.13/clear {}
+2026-03-29 23:11:58,784 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.13/clear HTTP/1.1" 200 0
+2026-03-29 23:11:58,784 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:58,784 - DEBUG - Finished Request
+2026-03-29 23:11:58,784 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.13/value {'text': 'Ora200405$', 'value': ['O', 'r', 'a', '2', '0', '0', '4', '0', '5', '$']}
+2026-03-29 23:11:58,817 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.13/value HTTP/1.1" 200 0
+2026-03-29 23:11:58,818 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:58,818 - DEBUG - Finished Request
+2026-03-29 23:11:58,818 - INFO - Entered password
+2026-03-29 23:11:58,918 - INFO - Looking for login button in modal/form...
+2026-03-29 23:11:58,919 - DEBUG - Trying selector 1/5 for login button: //input[@type='password']/ancestor::form//button[contains(@class, 'bg-main-light-blue')]
+2026-03-29 23:11:58,919 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element {'using': 'xpath', 'value': "//input[@type='password']/ancestor::form//button[contains(@class, 'bg-main-light-blue')]"}
+2026-03-29 23:11:58,925 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element HTTP/1.1" 200 0
+2026-03-29 23:11:58,925 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.16"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:58,925 - DEBUG - Finished Request
+2026-03-29 23:11:58,925 - INFO - Found login button using selector 1
+2026-03-29 23:11:58,925 - DEBUG - POST http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.16/click {}
+2026-03-29 23:11:58,958 - DEBUG - http://localhost:64956 "POST /session/3be1c75f9c6349796cc9d0d3a4167118/element/f.B4B240198F86795732F906104FE1D902.d.C5116429F7651E7A0D92EA952AABC395.e.16/click HTTP/1.1" 200 0
+2026-03-29 23:11:58,958 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-03-29 23:11:58,958 - DEBUG - Finished Request
+2026-03-29 23:11:58,958 - INFO - Clicked login button
+2026-03-29 23:11:58,958 - INFO - Login button clicked!
+2026-03-29 23:11:58,958 - INFO - Login completed successfully!
+2026-03-29 23:12:01,959 - INFO - 
+Processing lot 1/1
+2026-03-29 23:12:01,959 - INFO - ============================================================
+2026-03-29 23:12:01,959 - INFO - PROCESSING LOT: None
+2026-03-29 23:12:01,959 - INFO - ============================================================
+2026-03-29 23:12:01,959 - INFO - Waiting for mail.ru message with matching lot link...
+2026-03-29 23:12:01,960 - INFO - ============================================================
+2026-03-29 23:12:01,960 - INFO - WAITING FOR MAIL.RU LOT LINK
+2026-03-29 23:12:01,960 - INFO - ============================================================
+2026-03-29 23:12:01,960 - INFO - Accepting any tizilim auction room link from mail
+2026-03-29 23:12:02,654 - INFO - Mailbox checked successfully, but no suitable unread messages were found yet
+2026-03-29 23:12:05,487 - INFO - Mailbox checked successfully, but no suitable unread messages were found yet
+2026-03-29 23:12:08,260 - INFO - Mailbox checked successfully, but no suitable unread messages were found yet
+2026-03-29 23:12:10,970 - INFO - Mailbox checked successfully, but no suitable unread messages were found yet
+2026-03-29 23:12:12,737 - DEBUG - DELETE http://localhost:64956/session/3be1c75f9c6349796cc9d0d3a4167118 {}
+2026-03-29 23:12:12,738 - DEBUG - Resetting dropped connection: localhost

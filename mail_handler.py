@@ -145,27 +145,33 @@ def _message_text_matches_filters(message_text):
 def _search_message_ids(mailbox):
     search_queries = []
 
-    if Config.MAIL_CHECK_UNSEEN_FIRST:
+    if Config.MAIL_UNSEEN_ONLY:
         search_queries.append(("UNSEEN",))
-
-    search_queries.append(("ALL",))
+    else:
+        if Config.MAIL_CHECK_UNSEEN_FIRST:
+            search_queries.append(("UNSEEN",))
+        search_queries.append(("ALL",))
 
     seen_ids = set()
     ordered_ids = []
+    had_search_error = False
 
     for query in search_queries:
         status, data = mailbox.search(None, *query)
         if status != "OK":
+            had_search_error = True
+            logger.warning(f"IMAP search failed for query {query}: status={status}, data={data}")
             continue
 
-        message_ids = data[0].split()
+        raw_ids = data[0] if data else b""
+        message_ids = raw_ids.split()
         for message_id in reversed(message_ids[-Config.MAIL_RECENT_MESSAGES_LIMIT:]):
             if message_id in seen_ids:
                 continue
             seen_ids.add(message_id)
             ordered_ids.append(message_id)
 
-    return ordered_ids
+    return ordered_ids, had_search_error
 
 
 def wait_for_lot_link_in_mail(expected_lot_url=None):
@@ -186,11 +192,18 @@ def wait_for_lot_link_in_mail(expected_lot_url=None):
         try:
             mailbox = imaplib.IMAP4_SSL(Config.MAIL_IMAP_HOST, Config.MAIL_IMAP_PORT)
             mailbox.login(Config.MAIL_EMAIL, Config.MAIL_PASSWORD)
-            mailbox.select(Config.MAIL_FOLDER)
+            select_status, select_data = mailbox.select(Config.MAIL_FOLDER)
+            if select_status != "OK":
+                logger.warning(f"Could not open mailbox folder {Config.MAIL_FOLDER}: status={select_status}, data={select_data}")
+                time.sleep(Config.MAIL_POLL_INTERVAL)
+                continue
 
-            message_ids = _search_message_ids(mailbox)
+            message_ids, had_search_error = _search_message_ids(mailbox)
             if not message_ids:
-                logger.warning("Could not search mailbox")
+                if had_search_error:
+                    logger.warning("Mailbox search returned no usable results because IMAP search failed")
+                else:
+                    logger.info("Mailbox checked successfully, but no suitable unread messages were found yet")
                 time.sleep(Config.MAIL_POLL_INTERVAL)
                 continue
 

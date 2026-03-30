@@ -29,6 +29,7 @@ class Config:
     MAIL_BODY_CONTAINS = "Заказчик приглашает Вас принять участие в аукционе"
     MAIL_ACCEPT_ANY_ROOM_LINK = True
     MAIL_CHECK_UNSEEN_FIRST = True
+    MAIL_UNSEEN_ONLY = True
     MAIL_RECENT_MESSAGES_LIMIT = 5
 
     # Lot URLs to process after login
